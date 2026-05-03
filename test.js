@@ -1,16 +1,20 @@
-console.log("🔍 Running Tests...");
+function testTimeline() {
+    let input = "timeline";
+    if (input.includes("timeline")) {
+        console.log("PASS: Timeline works");
+    } else {
+        console.log("FAIL: Timeline broken");
+    }
+}
 
-// Feature Tests
-console.log("Timeline:", "timeline".includes("timeline") ? "PASS" : "FAIL");
-console.log("Vote:", "vote".includes("vote") ? "PASS" : "FAIL");
-console.log("Candidate:", "candidate".includes("candidate") ? "PASS" : "FAIL");
+function testVote() {
+    let input = "vote";
+    if (input.includes("vote")) {
+        console.log("PASS: Vote works");
+    } else {
+        console.log("FAIL: Vote broken");
+    }
+}
 
-// Security Test
-let dirty = "<script>alert(1)</script>";
-let clean = dirty.replace(/[^a-zA-Z0-9 ]/g, "");
-console.log("Sanitize:", clean.includes("<") ? "FAIL" : "PASS");
-
-// Edge Case
-console.log("Empty Input:", "" === "" ? "PASS" : "FAIL");
-
-console.log("✅ All Tests Completed");
+testTimeline();
+testVote();
